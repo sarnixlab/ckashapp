@@ -345,9 +345,9 @@ export default function TermsAndConditions() {
         .ckash-terms-hero h1 {
           margin: 22px auto 17px;
           max-width: 820px;
-          font-size: clamp(42px, 7vw, 84px);
-          line-height: 0.95;
-          letter-spacing: -0.065em;
+          font-size: clamp(32px, 6vw, 56px);
+          line-height: 1.05;
+          letter-spacing: -0.045em;
           font-weight: 780;
           color: #ffffff;
           text-shadow: 0 28px 80px rgba(255, 255, 255, 0.13);
@@ -553,7 +553,7 @@ export default function TermsAndConditions() {
         .ckash-terms-card h2 {
           margin: 10px 0 16px;
           color: #ffffff;
-          font-size: clamp(22px, 3vw, 31px);
+          font-size: clamp(21px, 2.4vw, 28px);
           line-height: 1.15;
           letter-spacing: -0.035em;
           position: relative;

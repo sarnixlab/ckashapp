@@ -51,7 +51,7 @@ export default function BlogPage() {
               <div className="section-tag">
                 <span className="section-tag-line" /> Ckash Journal
               </div>
-              <h1 className="font-display text-[clamp(2.45rem,10vw,5rem)] font-semibold leading-[0.98] tracking-tight text-bone md:text-7xl">
+              <h1 className="font-display text-[clamp(2rem,6.4vw,3rem)] font-semibold leading-[1.06] tracking-tight text-bone md:text-[clamp(2.75rem,4.6vw,4.25rem)]">
                 Explore our lastest Information.
               </h1>
               
@@ -93,7 +93,7 @@ export default function BlogPage() {
                 <div className="section-tag mb-3">
                   <span className="section-tag-line" /> All posts
                 </div>
-                <h2 className="font-display text-[clamp(2rem,7vw,2.75rem)] font-semibold leading-tight tracking-tight text-bone md:text-4xl">
+                <h2 className="font-display text-[clamp(1.65rem,5vw,2.15rem)] font-semibold leading-[1.1] tracking-tight text-bone md:text-[clamp(2rem,3vw,2.5rem)]">
                   Browse the archive
                 </h2>
               </div>
@@ -125,7 +125,7 @@ export default function BlogPage() {
                 variants={childReveal}
                 className="mt-8 rounded-[18px] border border-white/10 bg-white/[0.035] px-6 py-14 text-center"
               >
-                <h3 className="font-display text-3xl font-semibold text-bone">No posts found</h3>
+                <h3 className="font-display text-2xl font-semibold text-bone md:text-3xl">No posts found</h3>
                 <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-ash">
                   Try a different keyword, switch category, or reset the filters to bring the archive back.
                 </p>

@@ -127,11 +127,11 @@ export default function Hero() {
               <span className="section-tag-line bg-white/35" /> Stablecoin wallet
             </div>
 
-            <h1 className="font-display text-[clamp(2.35rem,10.5vw,4.85rem)] font-semibold leading-[0.98] tracking-tight text-white md:text-[clamp(3.15rem,5.8vw,5.9rem)]">
+            <h1 className="font-display text-[clamp(2rem,6vw,2.55rem)] font-semibold leading-[1.06] tracking-tight text-white md:text-[clamp(2.55rem,4vw,3.45rem)]">
               Built for the next generation of multichain finance.
             </h1>
 
-            <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-white/52 sm:text-base md:mx-0 md:mt-5 md:text-lg">
+            <p className="mx-auto mt-4 max-w-xl text-[13px] leading-relaxed text-white/52 sm:text-base md:mx-0 md:mt-5 md:text-lg">
               Manage assets, discover apps, send payments, and move across chains
               effortlessly, in one smooth wallet experience.
             </p>
@@ -224,7 +224,7 @@ export default function Hero() {
           className="pointer-events-none absolute inset-0 z-50 flex items-center justify-center px-5 text-center sm:px-8"
         >
           <div className="pointer-events-auto mx-auto mt-16 w-full max-w-5xl px-5 py-8 sm:mt-20 sm:px-8 sm:py-10 md:mt-0">
-            <h2 className="mx-auto max-w-4xl text-[clamp(2rem,8.2vw,3.4rem)] font-semibold leading-[1.04] tracking-tight text-white md:text-[54px]">
+            <h2 className="mx-auto max-w-4xl font-display text-[clamp(1.9rem,6vw,2.8rem)] font-semibold leading-[1.08] tracking-tight text-white md:text-[clamp(2.35rem,4vw,3.35rem)]">
               Not just a wallet, but a gateway to multichain finance, payment
               and Web3 distribution.
             </h2>

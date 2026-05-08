@@ -27,7 +27,7 @@ export default function SecurityControlSection() {
             Security & control
           </div>
 
-          <h2 className="max-w-3xl font-display text-[clamp(2.25rem,9vw,3.65rem)] font-semibold leading-[0.98] tracking-tight text-white">
+          <h2 className="max-w-3xl font-display text-[clamp(1.8rem,5.8vw,2.55rem)] font-semibold leading-[1.08] tracking-tight text-white md:text-[clamp(2.25rem,3.8vw,3.25rem)]">
             Keep control of your stablecoins from the first tap.
           </h2>
 

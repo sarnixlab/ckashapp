@@ -44,7 +44,7 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
             <span>{post.readTime} min read</span>
           </div>
 
-          <h3 className="mt-4 min-h-[86px] font-display text-[25px] font-semibold leading-[1.04] tracking-tight text-white">
+          <h3 className="mt-4 min-h-[74px] font-display text-[clamp(1.25rem,4.5vw,1.55rem)] font-semibold leading-[1.1] tracking-tight text-white">
             {post.title}
           </h3>
           <p className="mt-4 line-clamp-3 text-sm leading-relaxed text-white/52">

@@ -19,7 +19,7 @@ export default function FeaturedBlog({ post }: { post: Blog }) {
           <div className="section-tag mb-3">
             <span className="section-tag-line" /> Featured
           </div>
-          <h2 className="font-display text-2xl font-semibold tracking-tight text-bone md:text-3xl">
+          <h2 className="font-display text-xl font-semibold tracking-tight text-bone md:text-2xl">
             Editor's pick
           </h2>
         </div>
@@ -49,7 +49,7 @@ export default function FeaturedBlog({ post }: { post: Blog }) {
               <span>{post.readTime} min read</span>
             </div>
 
-            <h3 className="mt-6 font-display text-4xl font-semibold leading-[1.02] tracking-tight text-bone md:text-5xl">
+            <h3 className="mt-6 font-display text-[clamp(1.75rem,5.5vw,2.35rem)] font-semibold leading-[1.08] tracking-tight text-bone md:text-[clamp(2.15rem,3.6vw,3rem)]">
               {post.title}
             </h3>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-ash md:text-lg">

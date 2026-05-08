@@ -75,7 +75,7 @@ export default function FeatureGrid() {
             What it does
           </div>
 
-          <h2 className="max-w-3xl font-display text-[clamp(2.35rem,10vw,4rem)] font-semibold leading-[0.98] tracking-tight text-white md:text-6xl">
+          <h2 className="max-w-3xl font-display text-[clamp(1.75rem,5.8vw,2.45rem)] font-semibold leading-[1.08] tracking-tight text-white md:text-[clamp(2.25rem,3.8vw,3.25rem)]">
             Everything stablecoins should be.
           </h2>
 
@@ -86,25 +86,26 @@ export default function FeatureGrid() {
         </motion.div>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6 xl:grid-cols-3">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
               variants={cardReveal}
               transition={staggeredCardTransition(index, 0.06)}
-              className="group h-[300px] [perspective:1800px] sm:h-[340px] md:h-[380px]"
+              className="group overflow-hidden rounded-[22px] bg-[#202020] shadow-[0_20px_70px_rgba(0,0,0,0.38)] [perspective:none] md:h-[380px] md:overflow-visible md:rounded-[28px] md:bg-transparent md:shadow-none md:[perspective:1800px]"
             >
               {/* FLIP WRAPPER */}
-              <div className="relative h-full w-full rounded-[28px] [transform-style:preserve-3d] transition-all duration-1000 ease-smooth group-hover:[transform:rotateY(180deg)]">
+              <div className="relative flex h-full w-full flex-col rounded-[22px] md:block md:rounded-[28px] md:[transform-style:preserve-3d] md:transition-all md:duration-1000 md:ease-smooth md:group-hover:[transform:rotateY(180deg)]">
                 
                 {/* FRONT CARD */}
-                <div className="absolute inset-0 overflow-hidden rounded-[28px] bg-[#1f1f1f] shadow-[0_20px_80px_rgba(0,0,0,0.45)] [backface-visibility:hidden]">
+                <div className="relative overflow-hidden rounded-t-[22px] bg-[#1f1f1f] md:absolute md:inset-0 md:rounded-[28px] md:shadow-[0_20px_80px_rgba(0,0,0,0.45)] md:[backface-visibility:hidden]">
                   
                   {/* IMAGE */}
                   <img
                     src={feature.image}
                     alt={feature.title}
-                    className="h-full w-full object-cover object-center transition-all duration-1400 ease-smooth group-hover:scale-[1.06]"
+                    loading="lazy"
+                    className="h-56 w-full object-cover object-center transition-all duration-1400 ease-smooth group-hover:scale-[1.03] sm:h-64 md:h-full md:group-hover:scale-[1.06]"
                   />
 
                   {/* OVERLAY */}
@@ -116,18 +117,18 @@ export default function FeatureGrid() {
                   </div>
 
                   {/* TITLE */}
-                  <div className="absolute bottom-6 left-6 right-6 z-10">
-                    <h3 className="max-w-[260px] font-display text-[clamp(1.55rem,7vw,1.9rem)] font-semibold leading-[1] tracking-tight text-white">
+                  <div className="absolute bottom-5 left-5 right-5 z-10 md:bottom-6 md:left-6 md:right-6">
+                    <h3 className="max-w-[260px] font-display text-[clamp(1.35rem,4.8vw,1.65rem)] font-semibold leading-[1.08] tracking-tight text-white">
                       {feature.title}
                     </h3>
                   </div>
 
                   {/* BORDER */}
-                  <div className="absolute inset-0 rounded-[28px] ring-1 ring-white/[0.08]" />
+                  <div className="absolute inset-0 rounded-t-[22px] ring-1 ring-white/[0.08] md:rounded-[28px]" />
                 </div>
 
                 {/* BACK CARD */}
-                <div className="absolute inset-0 overflow-hidden rounded-[28px] bg-[#2a2a2a] [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
+                <div className="relative overflow-hidden rounded-b-[22px] bg-[#2a2a2a] md:absolute md:inset-0 md:rounded-[28px] md:[transform:rotateY(180deg)] md:[backface-visibility:hidden] md:shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
                   
                   {/* GLASS OVERLAY */}
                   <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.01))]" />
@@ -137,10 +138,10 @@ export default function FeatureGrid() {
                   <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-black/40 blur-3xl" />
 
                   {/* CONTENT */}
-                  <div className="relative z-10 flex h-full flex-col justify-between p-5 sm:p-7">
+                  <div className="relative z-10 flex h-full flex-col justify-between gap-5 p-5 sm:p-6 md:gap-0 md:p-7">
                     
                     {/* TAG */}
-                    <div>
+                    <div className="hidden md:block">
                       <span className="inline-flex rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[11px] tracking-wide text-white/50 backdrop-blur-xl sm:px-4 sm:py-2 sm:text-xs">
                         {feature.title}
                       </span>
@@ -148,7 +149,7 @@ export default function FeatureGrid() {
 
                     {/* TEXT */}
                     <div>
-                      <h3 className="font-display text-[clamp(1.25rem,5.5vw,1.65rem)] font-semibold leading-[1.08] tracking-tight text-white">
+                      <h3 className="font-display text-[clamp(1.2rem,4.5vw,1.45rem)] font-semibold leading-[1.12] tracking-tight text-white">
                         {feature.body}
                       </h3>
 
@@ -159,7 +160,7 @@ export default function FeatureGrid() {
                   </div>
 
                   {/* BORDER */}
-                  <div className="absolute inset-0 rounded-[28px] ring-1 ring-white/[0.08]" />
+                  <div className="absolute inset-0 rounded-b-[22px] ring-1 ring-white/[0.08] md:rounded-[28px]" />
                 </div>
               </div>
             </motion.div>

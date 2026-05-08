@@ -85,7 +85,7 @@ export default function BlogSection() {
               <span className="section-tag-line bg-black/35" /> Blog
             </div>
 
-            <h2 className="font-display text-[clamp(2rem,11vw,3.6rem)] font-semibold leading-[1] tracking-tight text-[#111]">
+            <h2 className="font-display text-[clamp(1.75rem,5.8vw,2.4rem)] font-semibold leading-[1.08] tracking-tight text-[#111] md:text-[clamp(2.2rem,3.6vw,3.15rem)]">
               Notes on stablecoins, payments, and wallet UX.
             </h2>
 
@@ -166,7 +166,7 @@ export default function BlogSection() {
                 </div>
 
                 <div className="bg-[#111] p-5 sm:p-6">
-                  <h3 className="font-display text-[clamp(1.25rem,6vw,1.65rem)] font-semibold leading-[1.08] tracking-tight text-white">
+                  <h3 className="font-display text-[clamp(1.2rem,4.5vw,1.45rem)] font-semibold leading-[1.12] tracking-tight text-white">
                     {post.title}
                   </h3>
 

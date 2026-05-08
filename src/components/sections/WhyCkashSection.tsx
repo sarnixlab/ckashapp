@@ -102,7 +102,7 @@ export default function WhyCkashSection() {
             <span className="h-px w-8 bg-white/30" /> Compare
           </div>
 
-          <h2 className="font-display text-[clamp(2.2rem,10vw,4.5rem)] font-semibold leading-[0.95] tracking-tight text-white">
+          <h2 className="font-display text-[clamp(1.75rem,5.8vw,2.45rem)] font-semibold leading-[1.08] tracking-tight text-white md:text-[clamp(2.25rem,3.8vw,3.25rem)]">
             Why Ckash?
           </h2>
 
@@ -213,7 +213,7 @@ export default function WhyCkashSection() {
 
           <div className="flex items-center justify-center border-t border-white/5 px-4 py-3 md:hidden">
             <p className="text-[11px] tracking-wide text-white/35">
-              ← Swipe horizontally →
+              Swipe horizontally
             </p>
           </div>
         </motion.div>

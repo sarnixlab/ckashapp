@@ -42,7 +42,7 @@ export default function Footer() {
                     Builders
                   </span>
 
-                  <h2 className="mt-5 max-w-4xl font-display text-[clamp(2.35rem,10vw,4rem)] font-semibold leading-[0.95] tracking-tight text-white md:text-[64px]">
+                  <h2 className="mt-5 max-w-4xl font-display text-[clamp(2rem,6.2vw,2.9rem)] font-semibold leading-[1.06] tracking-tight text-white md:text-[clamp(2.5rem,4.2vw,3.6rem)]">
                     Want your app inside the Ckash dapp section?
                   </h2>
 
@@ -78,7 +78,7 @@ export default function Footer() {
                     Get started
                   </span>
 
-                  <h2 className="mt-5 font-display text-[clamp(2rem,9vw,2.75rem)] font-semibold leading-[0.98] tracking-tight">
+                  <h2 className="mt-5 font-display text-[clamp(1.75rem,5.8vw,2.3rem)] font-semibold leading-[1.08] tracking-tight md:text-[clamp(2.1rem,3.4vw,2.8rem)]">
                     Start using Ckash today.
                   </h2>
 
@@ -138,7 +138,7 @@ export default function Footer() {
                   Community
                 </span>
 
-                <h2 className="mt-4 max-w-3xl font-display text-[clamp(2rem,9vw,3.15rem)] font-semibold leading-[1] tracking-tight">
+                <h2 className="mt-4 max-w-3xl font-display text-[clamp(1.75rem,5.8vw,2.35rem)] font-semibold leading-[1.08] tracking-tight md:text-[clamp(2.2rem,3.6vw,3rem)]">
                   Join our community on
                 </h2>
 
@@ -172,7 +172,7 @@ export default function Footer() {
         {/* MAIN FOOTER */}
         <div className="glass soft-edge-refraction gray-holographic grid gap-10 rounded-[26px] border border-white/10 p-6 backdrop-blur-2xl sm:p-7 md:grid-cols-[1.1fr_1.2fr_1.4fr] md:p-10">
           <div className="flex flex-col justify-between gap-8">
-            <p className="max-w-md font-display text-[clamp(1.55rem,6.5vw,2.15rem)] font-medium leading-[1.18] tracking-tight text-bone">
+            <p className="max-w-md font-display text-[clamp(1.35rem,4.8vw,1.85rem)] font-medium leading-[1.22] tracking-tight text-bone">
               Move stablecoins with less friction. Build, pay, swap, and explore from one wallet.
             </p>
 

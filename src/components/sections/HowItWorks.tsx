@@ -182,7 +182,7 @@ export default function HowItWorks() {
             </div>
 
             <div className="mt-10 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-              <h2 className="font-display max-w-[12ch] text-[clamp(2.25rem,9vw,4rem)] font-semibold leading-[0.94] tracking-tight text-bone md:max-w-none">
+              <h2 className="font-display max-w-[12ch] text-[clamp(1.75rem,5.8vw,2.4rem)] font-semibold leading-[1.08] tracking-tight text-bone md:max-w-none md:text-[clamp(2.2rem,3.6vw,3rem)]">
                 Get started in seconds.
               </h2>
 
@@ -213,7 +213,7 @@ export default function HowItWorks() {
                     Step {step.n}
                   </div> */}
 
-                  <h3 className="mt-2 max-w-[12ch] font-display text-[clamp(2rem,8vw,3.8rem)] font-semibold leading-[0.96] tracking-tight text-bone sm:mt-3 md:max-w-xl">
+                  <h3 className="mt-2 max-w-[12ch] font-display text-[clamp(1.65rem,5.4vw,2.2rem)] font-semibold leading-[1.08] tracking-tight text-bone sm:mt-3 md:max-w-xl md:text-[clamp(2rem,3.4vw,2.75rem)]">
                     <DecryptText text={step.title} />
                   </h3>
 

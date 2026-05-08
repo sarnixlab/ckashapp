@@ -24,7 +24,7 @@ export default function BlogDetailPage() {
         <Navbar />
         <main className="px-5 pb-24 pt-36 sm:px-6 md:px-10">
           <div className="mx-auto max-w-3xl rounded-[18px] border border-white/10 bg-white/[0.035] p-8 text-center">
-            <h1 className="font-display text-4xl font-semibold">Post not found</h1>
+            <h1 className="font-display text-3xl font-semibold md:text-4xl">Post not found</h1>
             <p className="mt-3 text-ash">The article may have moved or the link is no longer active.</p>
             <Link
               to="/blog"
@@ -75,7 +75,7 @@ export default function BlogDetailPage() {
                 <span>{formatDate(post.date)}</span>
                 <span>{post.readTime} min read</span>
               </div>
-              <h1 className="mt-6 font-display text-[clamp(2.45rem,10vw,5rem)] font-semibold leading-[0.98] tracking-tight text-bone md:text-7xl">
+              <h1 className="mt-6 font-display text-[clamp(2rem,6.4vw,3rem)] font-semibold leading-[1.06] tracking-tight text-bone md:text-[clamp(2.75rem,4.6vw,4.25rem)]">
                 {post.title}
               </h1>
               <p className="mt-6 max-w-3xl text-base leading-relaxed text-ash md:text-lg">
@@ -114,7 +114,7 @@ export default function BlogDetailPage() {
                 <div className="section-tag mb-3">
                   <span className="section-tag-line" /> Related
                 </div>
-                <h2 className="font-display text-[clamp(2rem,7vw,2.75rem)] font-semibold leading-tight tracking-tight text-bone md:text-4xl">
+                <h2 className="font-display text-[clamp(1.65rem,5vw,2.15rem)] font-semibold leading-[1.1] tracking-tight text-bone md:text-[clamp(2rem,3vw,2.5rem)]">
                   Keep reading
                 </h2>
               </div>
