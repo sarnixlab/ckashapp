@@ -92,77 +92,67 @@ export default function FeatureGrid() {
               key={feature.title}
               variants={cardReveal}
               transition={staggeredCardTransition(index, 0.06)}
-              className="group overflow-hidden rounded-[22px] bg-[#202020] shadow-[0_20px_70px_rgba(0,0,0,0.38)] [perspective:none] md:h-[380px] md:overflow-visible md:rounded-[28px] md:bg-transparent md:shadow-none md:[perspective:1800px]"
+              className="group"
             >
-              {/* FLIP WRAPPER */}
-              <div className="relative flex h-full w-full flex-col rounded-[22px] md:block md:rounded-[28px] md:[transform-style:preserve-3d] md:transition-all md:duration-1000 md:ease-smooth md:group-hover:[transform:rotateY(180deg)]">
-                
-                {/* FRONT CARD */}
-                <div className="relative overflow-hidden rounded-t-[22px] bg-[#1f1f1f] md:absolute md:inset-0 md:rounded-[28px] md:shadow-[0_20px_80px_rgba(0,0,0,0.45)] md:[backface-visibility:hidden]">
-                  
-                  {/* IMAGE */}
+              {/* MOBILE / TOUCH CARD */}
+              <article className="overflow-hidden rounded-[22px] bg-[#202020] shadow-[0_20px_70px_rgba(0,0,0,0.38)] md:hidden">
+                <div className="relative h-56 overflow-hidden bg-[#1f1f1f] sm:h-64">
                   <img
                     src={feature.image}
                     alt={feature.title}
                     loading="lazy"
-                    className="h-56 w-full object-cover object-center transition-all duration-1400 ease-smooth group-hover:scale-[1.03] sm:h-64 md:h-full md:group-hover:scale-[1.06]"
+                    className="h-full w-full object-cover object-center"
                   />
-
-                  {/* OVERLAY */}
                   <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.82),rgba(0,0,0,0.08),transparent)]" />
-
-                  {/* GLOW */}
-                  <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
-                    <div className="absolute -bottom-20 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
-                  </div>
-
-                  {/* TITLE */}
-                  <div className="absolute bottom-5 left-5 right-5 z-10 md:bottom-6 md:left-6 md:right-6">
+                  <div className="absolute bottom-5 left-5 right-5 z-10">
                     <h3 className="max-w-[260px] font-display text-[clamp(1.35rem,4.8vw,1.65rem)] font-semibold leading-[1.08] tracking-tight text-white">
                       {feature.title}
                     </h3>
                   </div>
-
-                  {/* BORDER */}
-                  <div className="absolute inset-0 rounded-t-[22px] ring-1 ring-white/[0.08] md:rounded-[28px]" />
                 </div>
+              </article>
 
-                {/* BACK CARD */}
-                <div className="relative overflow-hidden rounded-b-[22px] bg-[#2a2a2a] md:absolute md:inset-0 md:rounded-[28px] md:[transform:rotateY(180deg)] md:[backface-visibility:hidden] md:shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
-                  
-                  {/* GLASS OVERLAY */}
-                  <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.01))]" />
+              {/* DESKTOP FLIP CARD */}
+              <article className="hidden h-[380px] [perspective:1800px] md:block">
+                <div className="relative h-full w-full rounded-[28px] [transform-style:preserve-3d] transition-all duration-1000 ease-smooth group-hover:[transform:rotateY(180deg)]">
+                  <div className="absolute inset-0 overflow-hidden rounded-[28px] bg-[#1f1f1f] shadow-[0_20px_80px_rgba(0,0,0,0.45)] [backface-visibility:hidden]">
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover object-center transition-all duration-1400 ease-smooth group-hover:scale-[1.06]"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.82),rgba(0,0,0,0.08),transparent)]" />
+                    <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
+                      <div className="absolute -bottom-20 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
+                    </div>
+                    <div className="absolute bottom-6 left-6 right-6 z-10">
+                      <h3 className="max-w-[260px] font-display text-[clamp(1.35rem,4.8vw,1.65rem)] font-semibold leading-[1.08] tracking-tight text-white">
+                        {feature.title}
+                      </h3>
+                    </div>
+                    <div className="absolute inset-0 rounded-[28px] ring-1 ring-white/[0.08]" />
+                  </div>
 
-                  {/* SOFT LIGHT */}
-                  <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-white/[0.05] blur-3xl" />
-                  <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-black/40 blur-3xl" />
-
-                  {/* CONTENT */}
-                  <div className="relative z-10 flex h-full flex-col justify-between gap-5 p-5 sm:p-6 md:gap-0 md:p-7">
-                    
-                    {/* TAG */}
-                    <div className="hidden md:block">
-                      <span className="inline-flex rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[11px] tracking-wide text-white/50 backdrop-blur-xl sm:px-4 sm:py-2 sm:text-xs">
+                  <div className="absolute inset-0 overflow-hidden rounded-[28px] bg-[#2a2a2a] shadow-[0_20px_80px_rgba(0,0,0,0.55)] [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.01))]" />
+                    <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-white/[0.05] blur-3xl" />
+                    <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-black/40 blur-3xl" />
+                    <div className="relative z-10 flex h-full flex-col justify-between p-7">
+                      <span className="inline-flex w-fit rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs tracking-wide text-white/50 backdrop-blur-xl">
                         {feature.title}
                       </span>
-                    </div>
-
-                    {/* TEXT */}
-                    <div>
                       <h3 className="font-display text-[clamp(1.2rem,4.5vw,1.45rem)] font-semibold leading-[1.12] tracking-tight text-white">
                         {feature.body}
                       </h3>
-
                       <p className="mt-4 text-[13px] leading-relaxed text-white/62 sm:mt-5 sm:text-sm">
                         {feature.fullContent}
                       </p>
                     </div>
+                    <div className="absolute inset-0 rounded-[28px] ring-1 ring-white/[0.08]" />
                   </div>
-
-                  {/* BORDER */}
-                  <div className="absolute inset-0 rounded-b-[22px] ring-1 ring-white/[0.08] md:rounded-[28px]" />
                 </div>
-              </div>
+              </article>
             </motion.div>
           ))}
         </div>
