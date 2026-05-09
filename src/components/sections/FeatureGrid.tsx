@@ -76,7 +76,7 @@ export default function FeatureGrid() {
           </div>
 
           <h2 className="max-w-3xl font-display text-[clamp(1.75rem,5.8vw,2.45rem)] font-semibold leading-[1.08] tracking-tight text-white md:text-[clamp(2.25rem,3.8vw,3.25rem)]">
-            Everything stablecoins should be.
+           Powerer.
           </h2>
 
           <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-white/55 sm:text-base md:text-lg">
@@ -95,20 +95,26 @@ export default function FeatureGrid() {
               className="group"
             >
               {/* MOBILE / TOUCH CARD */}
-              <article className="overflow-hidden rounded-[22px] bg-[#202020] shadow-[0_20px_70px_rgba(0,0,0,0.38)] md:hidden">
-                <div className="relative h-56 overflow-hidden bg-[#1f1f1f] sm:h-64">
+              <article className="overflow-hidden rounded-[22px] border border-white/[0.08] bg-[#181818] shadow-[0_20px_70px_rgba(0,0,0,0.38)] md:hidden">
+                <div className="relative h-52 overflow-hidden bg-[#1f1f1f] sm:h-60">
                   <img
                     src={feature.image}
                     alt={feature.title}
                     loading="lazy"
                     className="h-full w-full object-cover object-center"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.82),rgba(0,0,0,0.08),transparent)]" />
-                  <div className="absolute bottom-5 left-5 right-5 z-10">
-                    <h3 className="max-w-[260px] font-display text-[clamp(1.35rem,4.8vw,1.65rem)] font-semibold leading-[1.08] tracking-tight text-white">
-                      {feature.title}
-                    </h3>
-                  </div>
+                  <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.5),rgba(0,0,0,0.04))]" />
+                </div>
+                <div className="p-5">
+                  <span className="mb-4 inline-flex rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-[11px] font-medium uppercase tracking-[0.14em] text-white/50">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="font-display text-[1.45rem] font-semibold leading-[1.08] tracking-tight text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/70">
+                    {feature.body}
+                  </p>
                 </div>
               </article>
 
