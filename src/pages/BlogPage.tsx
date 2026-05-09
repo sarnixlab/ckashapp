@@ -80,15 +80,9 @@ export default function BlogPage() {
           </div>
         </motion.div>
 
-        <motion.section
-          variants={sectionReveal}
-          initial="hidden"
-          whileInView="visible"
-          viewport={revealViewport}
-          className="px-5 pb-24 sm:px-6 md:px-10"
-        >
+        <section className="px-5 pb-24 sm:px-6 md:px-10">
           <div className="mx-auto max-w-7xl">
-            <motion.div variants={childReveal} className="mb-6 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div className="mb-6 flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div>
                 <div className="section-tag mb-3">
                   <span className="section-tag-line" /> All posts
@@ -100,9 +94,9 @@ export default function BlogPage() {
               {/* <p className="max-w-md text-sm leading-relaxed text-ash md:text-right">
                 Search by topic, author, or category, then sort the reading list to match your pace.
               </p> */}
-            </motion.div>
+            </div>
 
-            <motion.div variants={childReveal}>
+            <div>
               <BlogSearchFilter
                 search={search}
                 category={category}
@@ -112,7 +106,7 @@ export default function BlogPage() {
                 onCategoryChange={setCategory}
                 onSortChange={setSort}
               />
-            </motion.div>
+            </div>
 
             {visiblePosts.length > 0 ? (
               <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -144,7 +138,7 @@ export default function BlogPage() {
               </motion.div>
             )}
           </div>
-        </motion.section>
+        </section>
       </main>
       <Footer />
     </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { cardReveal, smoothEase, staggeredCardTransition, subtleTap } from "@/lib/motion";
+import { smoothEase, subtleTap } from "@/lib/motion";
 import type { Blog } from "@/data/blogs";
 
 const formatDate = (date: string) =>
@@ -16,11 +16,10 @@ type BlogCardProps = {
   index?: number;
 };
 
-export default function BlogCard({ post, index = 0 }: BlogCardProps) {
+export default function BlogCard({ post }: BlogCardProps) {
   return (
     <motion.article
-      variants={cardReveal}
-      transition={staggeredCardTransition(index, 0.05)}
+      transition={{ duration: 0.55, ease: smoothEase }}
       whileHover={{ y: -6, scale: 1.01 }}
       className="group overflow-hidden rounded-[18px] border border-white/10 bg-[#111] shadow-[0_20px_60px_rgba(0,0,0,0.32)]"
     >
