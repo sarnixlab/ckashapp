@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import {
   cardReveal,
   sectionReveal,
-  revealViewport,
   staggeredCardTransition,
 } from "@/lib/motion";
 
@@ -61,10 +60,6 @@ export default function FeatureGrid() {
   return (
     <motion.section
       id="wallet"
-      variants={sectionReveal}
-      initial="hidden"
-      whileInView="visible"
-      viewport={revealViewport}
       className="snap-section relative overflow-hidden px-5 py-14 sm:px-6 md:px-10"
     >
       <div className="mx-auto max-w-7xl">
@@ -92,10 +87,10 @@ export default function FeatureGrid() {
               key={feature.title}
               variants={cardReveal}
               transition={staggeredCardTransition(index, 0.06)}
-              className="group"
+              className="group min-w-0"
             >
               {/* MOBILE / TOUCH CARD */}
-              <article className="overflow-hidden rounded-[22px] border border-white/[0.08] bg-[#181818] shadow-[0_20px_70px_rgba(0,0,0,0.38)] md:hidden">
+              <article className="block w-full overflow-hidden rounded-[22px] border border-white/[0.08] bg-[#181818] shadow-[0_20px_70px_rgba(0,0,0,0.38)] md:hidden">
                 <div className="relative h-52 overflow-hidden bg-[#1f1f1f] sm:h-60">
                   <img
                     src={feature.image}
